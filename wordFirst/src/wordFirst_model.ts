@@ -19,7 +19,11 @@ class wordFirst {
 
 // console.log(letters.indexOf(input2))
 
-const l = new wordFirst(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]);
+
+// const l = new wordFirst(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]);
+
+// console.log(`Palavra anterior: ${l.firstWord('aviao', 'jacaré')}`);
+
+export {wordFirst}
 
 
-console.log(`Palavra anterior: ${l.firstWord('aviao', 'jacaré')}`);
