@@ -1,4 +1,4 @@
-class wordFirst {
+class Dictionary {
   letters:string[] ;
   constructor(letters:string[]) {
     this.letters = letters;
@@ -24,6 +24,6 @@ class wordFirst {
 
 // console.log(`Palavra anterior: ${l.firstWord('aviao', 'jacaré')}`);
 
-export {wordFirst}
+export default Dictionary;
 
 
