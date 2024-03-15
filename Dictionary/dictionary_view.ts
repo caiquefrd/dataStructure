@@ -1,4 +1,4 @@
-import Dictionary from './src/Dictionary_model';
+import Dictionary from './models/Dictionary_model';
 import * as promptSync from 'prompt-sync'
 
 const prompt = promptSync();
