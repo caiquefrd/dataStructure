@@ -1,5 +1,5 @@
 import Dictionary from './models/Dictionary_model';
-import * as promptSync from 'prompt-sync'
+import * as promptSync from 'prompt-sync' //necessário instalar pacote prompt-sync -> npm install prommpt-sync
 
 const prompt = promptSync();
 
