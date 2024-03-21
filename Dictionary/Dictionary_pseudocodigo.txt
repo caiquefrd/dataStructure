@@ -1,0 +1,19 @@
+classe Dictionary{
+   letters :string[] 
+   constructor ( recebe um array de string com o alfabeto ){
+   a variável letters recebe o array de string
+   }
+
+método wordFirst( recebe dois inputs de string )
+	se a posição do primeiro input no array for menor que o segundo:
+             imprima o primeiro input
+ 	se não:
+             imprima o segundo input
+	fim se
+}
+
+——criando o objeto e chamando o método——
+const dicionario = new Dictionary[‘a’ , ‘b’ , ‘c’…]
+
+dicionario.firstWord( palavra1, palavra2 )
+o método retornará a palavra anterior no dicieonário.

@@ -1,18 +1,22 @@
 class Dictionary {
-  letters:string[] ;
-  constructor(letters:string[]) {
-    this.letters = letters;
+  private palavra1: string;
+  private palavra2: string;
+
+  constructor(palavra1: string, palavra2: string) {
+      this.palavra1 = palavra1;
+      this.palavra2 = palavra2;
   }
-  firstWord(input1: string, input2: string):string {
-    if (this.letters.indexOf(input1.charAt(0)) < this.letters.indexOf(input2.charAt(0))) { //compara a posição da letra extraida dos inputs com o array principal do alfabeto
-      return input1;
-    } else {
-      return input2;
-    }
+
+  compare(): void {
+      if (this.palavra1 < this.palavra2) {
+          console.log(`${this.palavra1} vem antes de ${this.palavra2} no dicionário.`);
+      } else if (this.palavra1 > this.palavra2) {
+          console.log(`${this.palavra2} vem antes de ${this.palavra1} no dicionário.`);
+      } else {
+          console.log(`${this.palavra1} e ${this.palavra2} são iguais.`);
+      }
   }
 }
-
-
 
 
 export default Dictionary;

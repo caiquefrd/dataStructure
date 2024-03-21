@@ -1,15 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var Dictionary = /** @class */ (function () {
-    function Dictionary(letters) {
-        this.letters = letters;
+    function Dictionary(palavra1, palavra2) {
+        this.palavra1 = palavra1;
+        this.palavra2 = palavra2;
     }
-    Dictionary.prototype.firstWord = function (input1, input2) {
-        if (this.letters.indexOf(input1.charAt(0)) < this.letters.indexOf(input2.charAt(0))) { //compara a posição da letra extraida dos inputs com o array principal do alfabeto
-            return input1;
+    Dictionary.prototype.compare = function () {
+        if (this.palavra1 < this.palavra2) {
+            console.log("".concat(this.palavra1, " vem antes de ").concat(this.palavra2, " no dicion\u00E1rio."));
+        }
+        else if (this.palavra1 > this.palavra2) {
+            console.log("".concat(this.palavra2, " vem antes de ").concat(this.palavra1, " no dicion\u00E1rio."));
         }
         else {
-            return input2;
+            console.log("".concat(this.palavra1, " e ").concat(this.palavra2, " s\u00E3o iguais."));
         }
     };
     return Dictionary;

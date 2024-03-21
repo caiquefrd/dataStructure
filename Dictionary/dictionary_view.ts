@@ -1,10 +1,11 @@
 import Dictionary from './models/Dictionary_model';
-import * as promptSync from 'prompt-sync' //necessário instalar pacote prompt-sync -> npm install prompt-sync
+import * as promptSync from 'prompt-sync' // necessário instalar pacote prompt-sync -> npm install prompt-sync
 
 const prompt = promptSync();
 
-const alphabet:string[] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+let word1:string = prompt('Entre com a primeira palavra: ')
+let word2:string = prompt('Entre com a segunda palavra: ')
 
-const l = new Dictionary(alphabet);
+const operacao = new Dictionary(word1 , word2);
 
-console.log(`A palavra anterior no dicionário é: ${l.firstWord(prompt('Entre com a primeira palavra: '), prompt('Entre com a segunda palavra: '))}`);
+operacao.compare(); 
