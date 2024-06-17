@@ -1,0 +1,25 @@
+Considere o seguinte vetor não ordenado: [0, 4, 3, 33, 22, -1, 4, 32, -3, -4, - 9, 31, 5, 2]
+ 
+Ilustre a operação do algoritmo de ordenação por mescla, informando todos os passos
+de divisão e conquista. Adicionalmente, indique a posição dos índices durante as intercalações,
+de modo a detalhar cada rodada de intercalação. 
+
+
+                              [0, 4, 3, 33, 22, -1, 4, 32, -3, -4, - 9, 31, 5, 2]
+
+                            [0, 4, 3, 33, 22, -1, 4,] e [ 32, -3, -4, - 9, 31, 5, 2]
+
+                        [0, 4, 3, 33] e [22, -1, 4,] e [32, -3, -4,] e [- 9, 31, 5, 2]
+
+                      [0, 4] e [3, 33] e [22] e [1,4] e [32, -3] e [-4] e [-9, 31] [5, 2]
+
+            [0] e [4] e [3] e [33] e [22] e [1] e [4] e [32] e [-3] e [-4] e [-9] e [31] e [5] e [2]
+
+
+
+
+
+
+
+
+
