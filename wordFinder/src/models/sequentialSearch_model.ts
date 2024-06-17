@@ -7,7 +7,7 @@ async function lerArquivo(nomeArquivo: string): Promise<string[]> {
     } catch (err) {
         throw err;
     }
-}
+} //devolve array de string
 
 function criarStringUnica(palavras: string[], delimitador: string): string {
     return palavras.join(delimitador);
@@ -17,23 +17,24 @@ function buscarPalavra(stringUnica: string, palavraBusca: string): { ocorrencias
     let ocorrencias = 0;
     let deslocamentos: number[] = [];
     let pos = stringUnica.indexOf(palavraBusca);
+    console.log("posicao inicial = " + pos)  //inicia na primeira posição encontrada : 8
     let deslocamentoTotal = 0;
 
     while (pos !== -1) {
         ocorrencias++;
-        deslocamentos.push(pos);
+        deslocamentos.push(pos + 1);
         deslocamentoTotal = pos + palavraBusca.length;
-        pos = stringUnica.indexOf(palavraBusca, deslocamentoTotal);
+        pos = stringUnica.indexOf(palavraBusca, deslocamentoTotal); //atualiza para a pos da prox ocorrencia, continua ...
     }
 
-    return { ocorrencias, deslocamentos };
+    return { ocorrencias, deslocamentos, };
 }
 
-export default async function sequentialSearch(arquivo:string) {
-    try {
-        const resultado = await lerArquivo(arquivo);
-        console.log(resultado);
-    } catch (err) {
-        console.error('Erro ao ler o arquivo:', err);
-    }
+export default async function sequentialSearch(arquivo:string, palavraBuscada:string, delimitador:string) {
+        const arquivoLido = await lerArquivo(arquivo);
+        console.log(arquivoLido) //debug
+        const stringUnica = criarStringUnica(arquivoLido, delimitador)
+        console.log("STRING UNICA ===  " + stringUnica); //debug
+        const resultado = buscarPalavra(stringUnica, palavraBuscada)
+        console.log(resultado)
 }
